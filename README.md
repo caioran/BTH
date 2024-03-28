@@ -1,3 +1,5 @@
+![BTHIntellij](https://github.com/caioran/BTH/assets/143942475/58813b4d-a02e-4514-aa78-7fcc9b467570)
+
 # BreakTheHabit
 O projeto em questão recebeu o nome de BreakTheHabit
 
@@ -26,6 +28,7 @@ O projeto se encontra na versão 1.0.
 - VerificadorVontade: Calcular, através dos dados herdados pela superclasse User, a média do desejo de fumar dos último sete dias do usuário.
 
 ## Autores
+
 - Caio Alves de Sousa (RA: 235440, email: caioalvesdesousa2005@gmail.com),
 - Cristian Souza (RA: 237085, email: 237085@facens.br),
 - Pedro Henrique Arruda  (RA: 236720, email: pedrohenriquearruda158@gmail.com),
