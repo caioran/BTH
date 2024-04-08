@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="breakthehabit.controller.ControllerSegundoCadastro"
-            prefHeight="400.0" prefWidth="600.0">
+<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="1024.0" minWidth="1440.0" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: #f0f6db;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerSegundoCadastro">
 
+
+
+<children>
+    <Label layoutX="319.0" layoutY="186.0" text="Crie sua conta.">
+        <font>
+            <Font size="48.0" />
+        </font>
+    </Label>
+    <Label layoutX="308.0" layoutY="246.0" text="Já tem uma conta? ">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label layoutX="480.0" layoutY="246.0" text="Faça Login." textFill="#2f7539">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+    <Label layoutX="182.0" layoutY="305.0" text="Data de quando começou a fumar (aproximada)">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <TextField layoutX="150.0" layoutY="334.0" prefHeight="61.0" prefWidth="623.0" promptText="Alan Turing" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <cursor>
+            <Cursor fx:constant="TEXT" />
+        </cursor>
+    </TextField>
+    <TextField layoutX="150.0" layoutY="442.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <cursor>
+            <Cursor fx:constant="TEXT" />
+        </cursor>
+    </TextField>
+    <TextField layoutX="150.0" layoutY="555.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <cursor>
+            <Cursor fx:constant="TEXT" />
+        </cursor>
+    </TextField>
+    <PasswordField layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
+    <Button layoutX="232.0" layoutY="902.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78 10%, #058c42 10%);" text="Prosseguir">
+        <font>
+            <Font size="41.0" />
+        </font>
+    </Button>
+    <Label layoutX="182.0" layoutY="410.0" text="Média de cigarros por dia">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="182.0" layoutY="523.0" text="Média de reais gastos por dia com cigarro">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="182.0" layoutY="642.0" text="Meta de quantos cigarros deseja fumar por dia">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+    <Label layoutX="182.0" layoutY="744.0" text="Confirmar Senha">
+        <font>
+            <Font size="18.0" />
+        </font>
+    </Label>
+      <Slider layoutX="198.0" layoutY="793.0" max="10.0" min="1.0" />
+</children>
 </AnchorPane>
