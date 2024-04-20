@@ -11,7 +11,8 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="1024.0" minWidth="1440.0" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: #f0f6db;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerSegundoCadastro">
+<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="1024.0" minWidth="1440.0" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: #f0f6db;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerCadastro2">
+
 
     <children>
         <Label layoutX="338.0" layoutY="257.0" text="Já tem uma conta? ">
@@ -24,7 +25,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Label layoutX="182.0" layoutY="305.0" text="Nome Completo">
+        <Label layoutX="182.0" layoutY="305.0" text="Data de quando começou a fumar">
             <font>
                 <Font size="18.0" />
             </font>
@@ -34,39 +35,38 @@
                 <Cursor fx:constant="TEXT" />
             </cursor>
         </TextField>
-        <TextField layoutX="150.0" layoutY="442.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <TextField layoutX="150.0" layoutY="442.0" prefHeight="61.0" prefWidth="623.0" promptText="10" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
         </TextField>
-        <TextField layoutX="150.0" layoutY="555.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <TextField layoutX="150.0" layoutY="555.0" prefHeight="61.0" prefWidth="623.0" promptText="R$ 12,00" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
         </TextField>
-        <PasswordField layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-        <PasswordField layoutX="150.0" layoutY="771.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-        <Button layoutX="232.0" layoutY="902.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " text="Prosseguir" textFill="WHITE">
+        <PasswordField layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" promptText="0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
+        <Button layoutX="232.0" layoutY="902.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " text="Cadastrar" textFill="WHITE">
             <font>
                 <Font name="Tw Cen MT" size="58.0" />
             </font>
         </Button>
-        <Label layoutX="182.0" layoutY="410.0" text="Endereço de Email">
+        <Label layoutX="182.0" layoutY="410.0" text="Média de cigarros por dia">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="182.0" layoutY="523.0" text="Data de Nascimento">
+        <Label layoutX="182.0" layoutY="523.0" text=" Média de reais gastos por dia com cigarros">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="182.0" layoutY="642.0" text="Senha">
+        <Label layoutX="182.0" layoutY="642.0" text="Meta dequantos cigarros deseja fumar por dia">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="182.0" layoutY="744.0" text="Confirmar Senha">
+        <Label layoutX="182.0" layoutY="744.0" text="Nível de dependência em cigarros">
             <font>
                 <Font size="18.0" />
             </font>
@@ -81,5 +81,11 @@
                 <Image url="@imagens/CrieSuaConta.png" />
             </image>
         </ImageView>
+      <Slider layoutX="150.0" layoutY="779.0" majorTickUnit="1.0" max="10.0" maxHeight="19.0" maxWidth="623.0" minHeight="19.0" minWidth="623.0" minorTickCount="0" prefHeight="19.0" prefWidth="623.0" showTickLabels="true" showTickMarks="true">
+         <cursor>
+            <Cursor fx:constant="CLOSED_HAND" />
+         </cursor>
+      </Slider>
     </children>
+
 </AnchorPane>

@@ -1,14 +1,135 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="breakthehabit.controller.ControllerDashboard"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="1024.0" minWidth="1440.0" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-color: #f0f6db;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerDashboard">
+   <children>
+      <Pane maxHeight="1024.0" maxWidth="326.0" minHeight="1024.0" minWidth="326.0" prefHeight="1024.0" prefWidth="326.0" style="-fx-background-color: #04471c;" />
+      <Label layoutX="793.0" layoutY="121.0" text="Olá,">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="839.0" layoutY="121.0" text="(nome)">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="361.0" layoutY="148.0" text="Abaixo estão alguns dados acerca do seu processo de abandono do vício em tabaco!">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Pane layoutX="376.0" layoutY="267.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="67.0" layoutY="66.0" text="Você ja gastou" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="124.0" text="Valor">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="195.0" text="em cigarros." textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="1110.0" layoutY="267.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="33.0" layoutY="43.0" text="Sua média de cigarros" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="124.0" text="Valor">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="78.0" text="por dia é igual a: " textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="923.0" layoutY="642.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="32.0" layoutY="64.0" text="Sua média de vontade" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="182.0" text="Valor">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="25.0" layoutY="89.0" text="de fumar, nos últimos 7" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="102.0" layoutY="124.0" text="é igual a:" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="552.0" layoutY="642.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="99.0" layoutY="75.0" text="Você está" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="103.0" layoutY="124.0" text="Valor">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="85.0" layoutY="195.0" text="da sua meta" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="59.0" layoutY="230.0" text="pré-estabelecida." textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="747.0" layoutY="267.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+         <children>
+            <Label layoutX="43.0" layoutY="66.0" text="Você ja economizou" textFill="WHITE">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="108.0" layoutY="113.0" text="Valor">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label layoutX="35.0" layoutY="195.0" text="desde que decidiu mudar." textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>
