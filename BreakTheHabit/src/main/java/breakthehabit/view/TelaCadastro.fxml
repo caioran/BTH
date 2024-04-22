@@ -45,10 +45,17 @@
    </TextField>
    <PasswordField layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
    <PasswordField layoutX="150.0" layoutY="771.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-   <Button layoutX="232.0" layoutY="902.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " text="Prosseguir" textFill="WHITE">
+   <Button layoutX="232.0" layoutY="891.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " textFill="WHITE">
       <font>
          <Font name="Tw Cen MT" size="58.0" />
       </font>
+         <graphic>
+            <ImageView fitHeight="43.0" fitWidth="197.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/Prosseguir.png" />
+               </image>
+            </ImageView>
+         </graphic>
    </Button>
    <Label layoutX="182.0" layoutY="410.0" text="Endereço de Email">
       <font>
@@ -80,5 +87,10 @@
          <Image url="@imagens/CrieSuaConta.png" />
       </image>
    </ImageView>
+      <ImageView fitHeight="1024.0" fitWidth="516.0" layoutX="924.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagens/Background2.png" />
+         </image>
+      </ImageView>
 </children>
 </AnchorPane>

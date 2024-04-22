@@ -1,14 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
 <?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="breakthehabit.controller.ControllerInicial"
-            prefHeight="400.0" prefWidth="600.0">
-
+<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="1024.0" minWidth="1440.0" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-image: imagens\Background.jpg;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerInicial">
+   <children>
+      <ImageView fitHeight="1044.0" fitWidth="1566.0" layoutX="-20.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagens/Background.jpg" />
+         </image>
+      </ImageView>
+      <Pane layoutX="448.0" layoutY="86.0" maxHeight="852.0" maxWidth="543.0" minHeight="852.0" minWidth="543.0" prefHeight="852.0" prefWidth="543.0" style="-fx-background-color: #04471C; -fx-background-radius: 40;">
+         <children>
+            <ImageView fitHeight="184.0" fitWidth="272.0" layoutX="146.0" layoutY="59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/Logotipo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="174.0" layoutY="243.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/RespireLiberteSe.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="120.0" fitWidth="494.0" layoutX="28.0" layoutY="365.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/SeuFuturo.png" />
+               </image>
+            </ImageView>
+            <Button layoutX="84.0" layoutY="547.0" maxHeight="95.0" maxWidth="380.0" minHeight="95.0" minWidth="380.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="380.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);">
+               <graphic>
+                  <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/CadastreSe.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Button layoutX="84.0" layoutY="657.0" maxHeight="95.0" maxWidth="380.0" minHeight="95.0" minWidth="380.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="380.0" style="-fx-background-radius: 47.5; -fx-border-radius: 47.5; -fx-border-color: #06c05a; -fx-background-color: #ffff; -fx-border-width: 10;">
+               <graphic>
+                  <ImageView fitHeight="43.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imagens/Entrarr.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </Pane>
+   </children>
 </AnchorPane>

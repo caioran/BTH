@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
 <?import java.util.*?>
@@ -16,23 +17,41 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <TextField layoutX="15.0" layoutY="269.86" prefHeight="52.29" prefWidth="534.0" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-        <Button layoutX="128.0" layoutY="623.0" mnemonicParsing="false" prefHeight="64.2" prefWidth="331.83" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);" text="Cadastrar-se" textFill="WHITE">
+        <TextField layoutX="15.0" layoutY="269.86" prefHeight="52.29" prefWidth="534.0" promptText="21/03/2024" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+        <Button layoutX="128.0" layoutY="623.0" mnemonicParsing="false" prefHeight="64.2" prefWidth="331.83" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #08A951);" textFill="WHITE">
          <font>
             <Font size="32.0" />
-         </font></Button>
+         </font>
+         <graphic>
+            <ImageView fitHeight="39.0" fitWidth="185.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/Registrar.png" />
+               </image>
+            </ImageView>
+         </graphic></Button>
       <Label layoutX="42.0" layoutY="349.0" text="Cigarros Fumados" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField layoutX="15.0" layoutY="379.86" prefHeight="52.29" prefWidth="534.0" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-      <Label layoutX="38.18" layoutY="463.0" prefHeight="30.0" prefWidth="615.0" text="Nível do desejo em fumar" textFill="WHITE">
+      <TextField layoutX="15.0" layoutY="379.86" prefHeight="52.29" prefWidth="534.0" promptText="0" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+         <font>
+            <Font size="18.0" />
+         </font></TextField>
+      <Label layoutX="38.0" layoutY="463.0" prefHeight="30.0" prefWidth="498.0" text="Nível do desejo em fumar" textFill="WHITE">
          <font>
             <Font size="20.0" />
          </font>
       </Label>
-      <Slider layoutX="24.0" layoutY="521.93" prefHeight="18.0" prefWidth="540.0" />
+      <Slider layoutX="24.0" layoutY="521.93" majorTickUnit="10.0" max="10.0" minorTickCount="0" prefHeight="18.0" prefWidth="540.0" showTickMarks="true" />
+      <ImageView fitHeight="150.0" fitWidth="227.0" layoutX="171.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagens/RegistroDiario.png" />
+         </image>
+      </ImageView>
 
     </children>
 </AnchorPane>

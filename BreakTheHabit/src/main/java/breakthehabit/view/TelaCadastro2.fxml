@@ -46,10 +46,17 @@
             </cursor>
         </TextField>
         <PasswordField layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" promptText="0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-        <Button layoutX="232.0" layoutY="902.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " text="Cadastrar" textFill="WHITE">
+        <Button layoutX="232.0" layoutY="875.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);" textFill="WHITE">
             <font>
                 <Font name="Tw Cen MT" size="58.0" />
             </font>
+         <graphic>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/CadastreSe.png" />
+               </image>
+            </ImageView>
+         </graphic>
         </Button>
         <Label layoutX="182.0" layoutY="410.0" text="Média de cigarros por dia">
             <font>
@@ -86,6 +93,14 @@
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
       </Slider>
+
+
+        <ImageView fitHeight="1024.0" fitWidth="516.0" layoutX="924.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@imagens/Background2.png" />
+            </image>
+        </ImageView>
+
     </children>
 
 </AnchorPane>

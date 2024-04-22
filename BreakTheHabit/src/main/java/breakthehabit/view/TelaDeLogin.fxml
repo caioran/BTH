@@ -15,26 +15,36 @@
 
 
     <children>
-        <Label layoutX="338.0" layoutY="339.0" text="Não tem uma conta?">
+        <Label layoutX="312.0" layoutY="342.0" text="Não tem uma conta?">
             <font>
-                <Font size="20.0" />
+                <Font size="24.0" />
             </font>
         </Label>
-        <Label layoutX="529.0" layoutY="340.0" text="Registre-se" textFill="#2f7539">
+        <Label layoutX="541.0" layoutY="342.0" text="Registre-se" textFill="#2f7539">
             <font>
-                <Font size="20.0" />
+                <Font size="24.0" />
             </font>
         </Label>
-        <TextField layoutX="150.0" layoutY="477.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <TextField layoutX="150.0" layoutY="477.0" prefHeight="61.0" prefWidth="623.0" promptText="alanturing@gmail.com" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
         </TextField>
-        <PasswordField layoutX="150.0" layoutY="587.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-        <Button layoutX="239.0" layoutY="726.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " text="Entrar" textFill="WHITE">
+        <PasswordField layoutX="150.0" layoutY="587.0" prefHeight="61.0" prefWidth="623.0" promptText="********" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
+        <Button layoutX="239.0" layoutY="726.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " textFill="WHITE">
             <font>
                 <Font size="41.0" />
             </font>
+         <graphic>
+            <ImageView fitHeight="41.0" fitWidth="125.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@imagens/Entrar.png" />
+               </image>
+            </ImageView>
+         </graphic>
         </Button>
         <Label layoutX="182.0" layoutY="441.0" text="Endereço de email">
             <font>
@@ -58,7 +68,12 @@
                 <Image url="@imagens/FacaLogin.png" />
             </image>
         </ImageView>
-      <Pane layoutX="1226.0" prefHeight="1024.0" prefWidth="200.0" />
+        <Pane layoutX="1226.0" prefHeight="1024.0" prefWidth="200.0" />
+      <ImageView fitHeight="1024.0" fitWidth="516.0" layoutX="924.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@imagens/Background2.png" />
+         </image>
+      </ImageView>
 
     </children>
 
