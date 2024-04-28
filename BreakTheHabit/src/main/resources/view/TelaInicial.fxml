@@ -31,7 +31,7 @@
                   <Image url="@imagens/SeuFuturo.png" />
                </image>
             </ImageView>
-            <Button layoutX="84.0" layoutY="547.0" maxHeight="95.0" maxWidth="380.0" minHeight="95.0" minWidth="380.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="380.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);">
+            <Button fx:id="btnIniCadastro" layoutX="84.0" layoutY="547.0" maxHeight="95.0" maxWidth="380.0" minHeight="95.0" minWidth="380.0" mnemonicParsing="false" onAction="#abrirTelaCadastro" prefHeight="95.0" prefWidth="380.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -40,7 +40,7 @@
                   </ImageView>
                </graphic>
             </Button>
-            <Button layoutX="84.0" layoutY="657.0" maxHeight="95.0" maxWidth="380.0" minHeight="95.0" minWidth="380.0" mnemonicParsing="false" prefHeight="95.0" prefWidth="380.0" style="-fx-background-radius: 47.5; -fx-border-radius: 47.5; -fx-border-color: #06c05a; -fx-background-color: #ffff; -fx-border-width: 10;">
+            <Button fx:id="btnIniEntrar" layoutX="84.0" layoutY="657.0" maxHeight="95.0" maxWidth="380.0" minHeight="95.0" minWidth="380.0" mnemonicParsing="false" onAction="#abrirTelaDeLogin" prefHeight="95.0" prefWidth="380.0" style="-fx-background-radius: 47.5; -fx-border-radius: 47.5; -fx-border-color: #06c05a; -fx-background-color: #ffff; -fx-border-width: 10;">
                <graphic>
                   <ImageView fitHeight="43.0" fitWidth="110.0" pickOnBounds="true" preserveRatio="true">
                      <image>

@@ -17,7 +17,7 @@
                   <Image url="@imagens/Logotipo.png" />
                </image>
             </ImageView>
-            <Button layoutY="320.0" maxHeight="61.0" maxWidth="326.0" minHeight="61.0" minWidth="326.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="326.0" style="-fx-background-color: #02b252; -fx-background-radius: 0;">
+            <Button fx:id="btnNovoRegistro" layoutY="320.0" maxHeight="61.0" maxWidth="326.0" minHeight="61.0" minWidth="326.0" mnemonicParsing="false" prefHeight="61.0" prefWidth="326.0" style="-fx-background-color: #02b252; -fx-background-radius: 0;">
                <graphic>
                   <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
                      <image>
@@ -27,17 +27,17 @@
                </graphic>
             </Button>
          </children></Pane>
-      <Label layoutX="793.0" layoutY="121.0" text="Olá,">
+      <Label layoutX="810.0" layoutY="121.0" text="Olá,">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="839.0" layoutY="121.0" text="(nome)">
+      <Label fx:id="lblNome" layoutX="859.0" layoutY="121.0" text="(nome)">
          <font>
             <Font size="24.0" />
          </font>
       </Label>
-      <Label layoutX="361.0" layoutY="148.0" text="Abaixo estão alguns dados acerca do seu processo de abandono do vício em tabaco!">
+      <Label layoutX="447.0" layoutY="156.0" text="Abaixo estão alguns dados acerca do seu processo de abandono do vício em tabaco!">
          <font>
             <Font size="24.0" />
          </font>
@@ -49,7 +49,7 @@
                   <Font name="Nirmala UI" size="24.0" />
                </font>
             </Label>
-            <Label layoutX="103.0" layoutY="124.0" text="Valor">
+            <Label fx:id="lblValorGasto" layoutX="103.0" layoutY="124.0" text="Valor">
                <font>
                   <Font size="36.0" />
                </font>
@@ -68,7 +68,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="103.0" layoutY="124.0" text="Valor">
+            <Label fx:id="lblMediaDiaria" layoutX="103.0" layoutY="124.0" text="Valor">
                <font>
                   <Font size="36.0" />
                </font>
@@ -87,7 +87,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="108.0" layoutY="182.0" text="Valor">
+            <Label fx:id="lblVontade" layoutX="108.0" layoutY="182.0" text="Valor">
                <font>
                   <Font size="36.0" />
                </font>
@@ -111,7 +111,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="103.0" layoutY="124.0" text="Valor">
+            <Label fx:id="lblCheckMeta" layoutX="103.0" layoutY="124.0" text="Valor">
                <font>
                   <Font size="36.0" />
                </font>
@@ -135,7 +135,7 @@
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="108.0" layoutY="113.0" text="Valor">
+            <Label fx:id="lblValorEconomizado" layoutX="108.0" layoutY="113.0" text="Valor">
                <font>
                   <Font size="36.0" />
                </font>
