@@ -1,21 +1,10 @@
 package breakthehabit.model.dao;
 
-import java.sql.Connection;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class RegistroDAO {
 
-    public boolean verificarEmail() {
-        try{
-            Connection conn = ConnectionDAO.getConnection("breakthehabit", "root", "");
 
-        } catch (ClassNotFoundException | SQLException e){
-            System.out.println("Não Conectou!");
-            e.printStackTrace();
-        }
-        return false;
-    }
 
     public static boolean insert(Connection conn, String nome, String email)
             throws SQLException {
@@ -24,5 +13,20 @@ public class RegistroDAO {
         Statement cmd = conn.createStatement();
         cmd.executeUpdate(sql);
         return true;
+    }
+
+    public static boolean verificadorEmail(Connection conn, String email) {
+        String sql = "SELECT COUNT(*) AS total FROM usuario WHERE email = ?";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setString(1, email);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                int total = rs.getInt("total");
+                return total > 0; // Se o total for maior que zero, o email já existe
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao verificar se o email existe: " + e.getMessage());
+        }
+        return false;
     }
 }

@@ -32,20 +32,32 @@
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
    </TextField>
-   <TextField fx:id="txtEmail" layoutX="150.0" layoutY="442.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+   <TextField fx:id="txtEmail" layoutX="150.0" layoutY="442.0" prefHeight="61.0" prefWidth="623.0" promptText="alanturing@gmail.com" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
    </TextField>
-   <TextField fx:id="txtDataNasc" layoutX="150.0" layoutY="555.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+   <TextField fx:id="txtDataNasc" layoutX="150.0" layoutY="555.0" prefHeight="61.0" prefWidth="623.0" promptText="20/06/1912" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
       <cursor>
          <Cursor fx:constant="TEXT" />
       </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
    </TextField>
-   <PasswordField fx:id="txtSenha" layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-   <PasswordField fx:id="txtConfirmarSenha" layoutX="150.0" layoutY="771.0" prefHeight="61.0" prefWidth="623.0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-   <Button fx:id="btnProsseguir" layoutX="232.0" layoutY="891.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " textFill="WHITE">
+   <PasswordField fx:id="txtSenha" layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" promptText="******" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+         <font>
+            <Font size="18.0" />
+         </font></PasswordField>
+   <PasswordField fx:id="txtConfirmarSenha" layoutX="150.0" layoutY="771.0" prefHeight="61.0" prefWidth="623.0" promptText="******" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
+   <Button fx:id="btnProsseguir" layoutX="232.0" layoutY="891.0" mnemonicParsing="false" onAction="#abrirTelaCadastro2" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " textFill="WHITE">
       <font>
          <Font name="Tw Cen MT" size="58.0" />
       </font>
@@ -92,5 +104,10 @@
             <Image url="@imagens/Background2.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblErroSenha" layoutX="182.0" layoutY="838.0" prefHeight="26.0" prefWidth="13.0" textFill="RED">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
 </children>
 </AnchorPane>

@@ -22,7 +22,7 @@ public class ControllerInicial {
     private void abrirTelaCadastro(ActionEvent event) {
         try {
             // Carrega o arquivo FXML da segunda janela
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaCadastro.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaCadastro1.fxml"));
             Parent root = loader.load();
 
             // Cria uma nova cena
