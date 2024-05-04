@@ -18,7 +18,7 @@
          <Font size="20.0" />
       </font>
    </Label>
-   <Label layoutX="509.0" layoutY="257.0" text="Faça Login." textFill="#2f7539">
+   <Label fx:id="lblLogin" layoutX="509.0" layoutY="257.0" onMouseClicked="#abrirTelaLogin" text="Faça Login." textFill="#2f7539" underline="true">
       <font>
          <Font size="20.0" />
       </font>
@@ -56,7 +56,10 @@
          <font>
             <Font size="18.0" />
          </font></PasswordField>
-   <PasswordField fx:id="txtConfirmarSenha" layoutX="150.0" layoutY="771.0" prefHeight="61.0" prefWidth="623.0" promptText="******" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
+   <PasswordField fx:id="txtConfirmarSenha" layoutX="150.0" layoutY="771.0" prefHeight="61.0" prefWidth="623.0" promptText="******" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+         <font>
+            <Font size="18.0" />
+         </font></PasswordField>
    <Button fx:id="btnProsseguir" layoutX="232.0" layoutY="891.0" mnemonicParsing="false" onAction="#abrirTelaCadastro2" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " textFill="WHITE">
       <font>
          <Font name="Tw Cen MT" size="58.0" />
@@ -68,6 +71,9 @@
                </image>
             </ImageView>
          </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
    </Button>
    <Label layoutX="182.0" layoutY="410.0" text="Endereço de Email">
       <font>

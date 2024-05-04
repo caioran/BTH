@@ -34,7 +34,7 @@
          </font>
         </TextField>
         <PasswordField fx:id="txtSenha" layoutX="150.0" layoutY="587.0" prefHeight="61.0" prefWidth="623.0" promptText="********" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-        <Button fx:id="btnEntrar" layoutX="239.0" layoutY="726.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " textFill="WHITE">
+        <Button fx:id="btnEntrar" layoutX="239.0" layoutY="726.0" mnemonicParsing="false" onAction="#realizarLogin" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);  " textFill="WHITE">
             <font>
                 <Font size="41.0" />
             </font>
@@ -74,6 +74,11 @@
             <Image url="@imagens/Background2.png" />
          </image>
       </ImageView>
+      <Label fx:id="lblErro" layoutX="182.0" layoutY="672.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
 
     </children>
 

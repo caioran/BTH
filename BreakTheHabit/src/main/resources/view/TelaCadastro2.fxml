@@ -20,7 +20,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Label layoutX="509.0" layoutY="257.0" text="Faça Login." textFill="#2f7539">
+        <Label layoutX="509.0" layoutY="257.0" onMouseClicked="#abrirTelaLogin" text="Faça Login." textFill="#2f7539">
             <font>
                 <Font size="20.0" />
             </font>
@@ -30,23 +30,31 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <TextField fx:id="txtDataInicioFumo" layoutX="150.0" layoutY="334.0" prefHeight="61.0" prefWidth="623.0" promptText="Alan Turing" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <TextField fx:id="txtDataInicioFumo" layoutX="150.0" layoutY="334.0" prefHeight="61.0" prefWidth="623.0" promptText="10/06/2020" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
         </TextField>
         <TextField fx:id="txtMediaCigarrosDia" layoutX="150.0" layoutY="442.0" prefHeight="61.0" prefWidth="623.0" promptText="10" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
         </TextField>
         <TextField fx:id="txtReaisGastoDia" layoutX="150.0" layoutY="555.0" prefHeight="61.0" prefWidth="623.0" promptText="R$ 12,00" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
             <cursor>
                 <Cursor fx:constant="TEXT" />
             </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
         </TextField>
-        <PasswordField fx:id="txtMeta" layoutX="150.0" layoutY="668.0" prefHeight="61.0" prefWidth="623.0" promptText="0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;" />
-        <Button fx:id="btnCadastrar" layoutX="232.0" layoutY="875.0" mnemonicParsing="false" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);" textFill="WHITE">
+        <Button fx:id="btnCadastrar" layoutX="232.0" layoutY="875.0" mnemonicParsing="false" onAction="#cadastrarUsuario" prefHeight="89.0" prefWidth="460.0" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #058c42);" textFill="WHITE">
             <font>
                 <Font name="Tw Cen MT" size="58.0" />
             </font>
@@ -57,6 +65,9 @@
                </image>
             </ImageView>
          </graphic>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
         </Button>
         <Label layoutX="182.0" layoutY="410.0" text="Média de cigarros por dia">
             <font>
@@ -68,7 +79,7 @@
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="182.0" layoutY="642.0" text="Meta dequantos cigarros deseja fumar por dia">
+        <Label layoutX="182.0" layoutY="642.0" text="Meta de quantos cigarros deseja fumar por dia">
             <font>
                 <Font size="18.0" />
             </font>
@@ -88,7 +99,7 @@
                 <Image url="@imagens/CrieSuaConta.png" />
             </image>
         </ImageView>
-      <Slider fx:id="sliDependencia" layoutX="150.0" layoutY="779.0" majorTickUnit="1.0" max="10.0" maxHeight="19.0" maxWidth="623.0" minHeight="19.0" minWidth="623.0" minorTickCount="0" prefHeight="19.0" prefWidth="623.0" showTickLabels="true" showTickMarks="true">
+      <Slider fx:id="sliDependencia" blockIncrement="1.0" layoutX="150.0" layoutY="779.0" majorTickUnit="1.0" max="10.0" maxHeight="19.0" maxWidth="623.0" minHeight="19.0" minWidth="623.0" minorTickCount="0" prefHeight="19.0" prefWidth="623.0" showTickLabels="true" showTickMarks="true" snapToTicks="true">
          <cursor>
             <Cursor fx:constant="CLOSED_HAND" />
          </cursor>
@@ -100,6 +111,19 @@
                 <Image url="@imagens/Background2.png" />
             </image>
         </ImageView>
+      <Label fx:id="lblErro2" layoutX="182.0" layoutY="816.0" textFill="RED">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtMeta" layoutX="150.0" layoutY="669.0" prefHeight="61.0" prefWidth="623.0" promptText="0" style="-fx-background-color: #f0f6db; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+         <cursor>
+            <Cursor fx:constant="TEXT" />
+         </cursor>
+         <font>
+            <Font size="18.0" />
+         </font>
+      </TextField>
 
     </children>
 

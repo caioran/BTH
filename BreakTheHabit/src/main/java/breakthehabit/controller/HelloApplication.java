@@ -16,6 +16,7 @@ public class HelloApplication extends Application {
             Scene scene = new Scene(fxmlLoader.load(), 1440, 1024);
             stage.setTitle("BreakTheHabit!");
             stage.setScene(scene);
+            stage.setScene(scene);
             stage.show();
        } catch (IOException e){
            e.printStackTrace();
