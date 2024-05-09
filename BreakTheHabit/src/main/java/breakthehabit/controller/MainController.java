@@ -7,20 +7,20 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-public class HelloApplication extends Application {
+public class MainController extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-       try{
-            FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("/view/TelaInicial.fxml"));
+        try {
+            FXMLLoader fxmlLoader = new FXMLLoader(MainController.class.getResource("/view/TelaInicial.fxml"));
             Scene scene = new Scene(fxmlLoader.load(), 1440, 1024);
             stage.setTitle("BreakTheHabit!");
             stage.setScene(scene);
             stage.setScene(scene);
             stage.show();
-       } catch (IOException e){
-           e.printStackTrace();
-       }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
@@ -28,4 +28,4 @@ public class HelloApplication extends Application {
         launch();
     }
 
-} //O projeto ainda não começou a ser desenvolvido!
+}

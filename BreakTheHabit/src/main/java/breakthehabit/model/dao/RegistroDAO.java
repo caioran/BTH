@@ -11,21 +11,19 @@ public class RegistroDAO {
         try {
             String sql = "insert into usuario(Nome, data_nascimento, data_comeco_fumo, Email, Senha, media_cigarro, " +
                     "meta, custo_diario, nivel_dependencia)" + "values (?, ?, ?, ?, ?, ?, ?, ?, ?);";
-            PreparedStatement statement = conn.prepareStatement(sql);
+            PreparedStatement stmt = conn.prepareStatement(sql);
 
-            // Setar os valores no PreparedStatement
-            statement.setString(1, nome);
-            statement.setDate(2, java.sql.Date.valueOf(dataNasc));
-            statement.setDate(3, java.sql.Date.valueOf(dataComecoFumo));
-            statement.setString(4, email);
-            statement.setString(5, senha);
-            statement.setInt(6, Integer.parseInt(media_cigarro));
-            statement.setInt(7, Integer.parseInt(meta));
-            statement.setDouble(8, Double.parseDouble(custoDiario));
-            statement.setDouble(9, Double.parseDouble(nivelDependencia));
+            stmt.setString(1, nome);
+            stmt.setDate(2, java.sql.Date.valueOf(dataNasc));
+            stmt.setDate(3, java.sql.Date.valueOf(dataComecoFumo));
+            stmt.setString(4, email);
+            stmt.setString(5, senha);
+            stmt.setInt(6, Integer.parseInt(media_cigarro));
+            stmt.setInt(7, Integer.parseInt(meta));
+            stmt.setDouble(8, Double.parseDouble(custoDiario));
+            stmt.setDouble(9, Double.parseDouble(nivelDependencia));
 
-            // Executar a query
-            int rowsInserted = statement.executeUpdate();
+            int rowsInserted = stmt.executeUpdate();
             return rowsInserted > 0;
 
         }catch(SQLException e){

@@ -1,6 +1,7 @@
 package breakthehabit.controller;
 
 import breakthehabit.model.Login;
+import breakthehabit.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -36,6 +37,7 @@ public class ControllerLogin {
        Login novoLogin = new Login(txtEmail.getText(), txtSenha.getText());
 
        if(novoLogin.checarLogin()){
+           Usuario.setEmailUser(txtEmail.getText());
            try {
                // Carrega o arquivo FXML da segunda janela
                FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaDashboard.fxml"));
