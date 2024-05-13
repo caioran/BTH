@@ -29,9 +29,10 @@ public class RegistroDiarioDAO {
         }
     }
     public static boolean verificadorData(Connection conn, String data) {
-        String sql = "SELECT COUNT(*) AS total FROM registrodiario WHERE data_registro = ?;";
+        String sql = "SELECT COUNT(*) AS total FROM registrodiario WHERE data_registro = ? and ID_User = ?;";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setDate(1, java.sql.Date.valueOf(data));
+            stmt.setInt(2, Usuario.getIdUser());
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
                 int total = rs.getInt("total");

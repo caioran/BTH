@@ -9,6 +9,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Slider;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -95,6 +96,8 @@ public class ControllerRegistroDiario {
                             RegistroDiario novoRegistro = new RegistroDiario(dataModelo, txtCigarrosFumados.getText(), sliNivelDesejoFumo.getValue());
                             if(novoRegistro.inserirNoBD()){
                                 lblErro.setText("Dados inseridos com sucesso!");
+                                Stage stage = (Stage) lblErro.getScene().getWindow();
+                                stage.close();
                             }
                             else{
                                 lblErro.setText("Houve algum erro na inserção dos dados!");

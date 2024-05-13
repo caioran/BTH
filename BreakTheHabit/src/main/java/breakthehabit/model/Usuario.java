@@ -17,6 +17,51 @@ public class Usuario {
     private static int metaUser;
     private static double dependenciaUser;
     private static int idUser;
+    private static int contagemCigarros;
+    private static int qtdDiasVicio;
+    private static int qtdDiasSemFumar;
+    private static int mediaDiaria;
+    private static double mediaVontadeDiaria;
+
+    public static int getMediaDiaria() {
+        return mediaDiaria;
+    }
+
+    public static void setMediaDiaria(int mediaDiaria) {
+        Usuario.mediaDiaria = mediaDiaria;
+    }
+
+    public static double getMediaVontadeDiaria() {
+        return mediaVontadeDiaria;
+    }
+
+    public static void setMediaVontadeDiaria(double mediaVontadeDiaria) {
+        Usuario.mediaVontadeDiaria = mediaVontadeDiaria;
+    }
+
+    public static int getContagemCigarros() {
+        return contagemCigarros;
+    }
+
+    public static void setContagemCigarros(int contagemCigarros) {
+        Usuario.contagemCigarros = contagemCigarros;
+    }
+
+    public static int getQtdDiasVicio() {
+        return qtdDiasVicio;
+    }
+
+    public static void setQtdDiasVicio(int qtdDiasVicio) {
+        Usuario.qtdDiasVicio = qtdDiasVicio;
+    }
+
+    public static int getQtdDiasSemFumar() {
+        return qtdDiasSemFumar;
+    }
+
+    public static void setQtdDiasSemFumar(int qtdDiasSemFumar) {
+        Usuario.qtdDiasSemFumar = qtdDiasSemFumar;
+    }
 
     public static int getIdUser() {
         return idUser;
@@ -96,6 +141,28 @@ public class Usuario {
         try {
             Connection conn = ConnectionDAO.getConnection("breakthehabit", "root", "");
             UserDAO.selectUserData(conn, email);
+
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Não Conectou!");
+            e.printStackTrace();
+
+        }
+    }
+    public static void atribuicaoValoresCalculados(){
+        try {
+            Connection conn = ConnectionDAO.getConnection("breakthehabit", "root", "");
+            UserDAO.getValoresPorID(conn, Usuario.getIdUser());
+
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Não Conectou!");
+            e.printStackTrace();
+
+        }
+    }
+    public static void atribuicaoMedia(){
+        try {
+            Connection conn = ConnectionDAO.getConnection("breakthehabit", "root", "");
+            UserDAO.calculoMedia(conn, Usuario.getIdUser());
 
         } catch (ClassNotFoundException | SQLException e) {
             System.out.println("Não Conectou!");

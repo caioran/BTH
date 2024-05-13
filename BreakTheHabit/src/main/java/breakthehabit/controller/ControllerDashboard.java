@@ -1,5 +1,6 @@
 package breakthehabit.controller;
 
+import breakthehabit.model.GastoEmCigarros;
 import breakthehabit.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,6 +9,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
+import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -61,6 +63,37 @@ public class ControllerDashboard implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle){
         lblNome.setText(Usuario.getNomeUser());
+        lblValorGasto.setText("R$ -" + String.valueOf(GastoEmCigarros.calcularGasto()));
+        lblValorEconomizado.setText("R$ " + String.valueOf(GastoEmCigarros.calcularEconomia()));
+        if(Usuario.getMediaDiaria() > Usuario.getMetaUser()){
+            lblMediaDiaria.setText(String.valueOf(Usuario.getMediaDiaria()));
+            lblMediaDiaria.setTextFill(Color.web("#823038"));
+        }
+        else{
+            lblMediaDiaria.setText(String.valueOf(Usuario.getMediaDiaria()));
+            lblMediaDiaria.setTextFill(Color.web("#00D147"));
+        }
+
+        if(Usuario.getMediaDiaria() > Usuario.getMetaUser()){
+           lblCheckMeta.setText("FORA");
+           lblCheckMeta.setTextFill(Color.web("#823038"));
+        }
+        else{
+            lblCheckMeta.setText("DENTRO");
+            lblCheckMeta.setTextFill(Color.web("#00D147"));
+        }
+        if(Usuario.getMediaVontadeDiaria() > 5){
+            lblVontade.setText(String.valueOf(Usuario.getMediaVontadeDiaria()));
+            lblVontade.setTextFill(Color.web("#823038"));
+        }
+        else{
+            lblVontade.setText(String.valueOf(Usuario.getMediaVontadeDiaria()));
+            lblVontade.setTextFill(Color.web("#00D147"));
+        }
+
+
     }
+
+
 
 }
