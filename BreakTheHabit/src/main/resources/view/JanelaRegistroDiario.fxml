@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="sliNivelDesejoFumo" maxHeight="761.0" maxWidth="588.0" minHeight="761.0" minWidth="588.0" prefHeight="761.0" prefWidth="588.0" style="-fx-background-color: #058C42;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerRegistroDiario">
+<AnchorPane fx:id="anchorPane" maxHeight="761.0" maxWidth="588.0" minHeight="761.0" minWidth="588.0" prefHeight="761.0" prefWidth="588.0" style="-fx-background-color: #058C42;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerRegistroDiario">
     <children>
 
         <Label layoutX="42.0" layoutY="239.0" text="Data" textFill="WHITE">
@@ -21,7 +21,7 @@
          <font>
             <Font size="18.0" />
          </font></TextField>
-        <Button fx:id="btnRegistrar" layoutX="128.0" layoutY="623.0" mnemonicParsing="false" prefHeight="64.2" prefWidth="331.83" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #08A951);" textFill="WHITE">
+        <Button fx:id="btnRegistrar" layoutX="128.0" layoutY="623.0" mnemonicParsing="false" onAction="#inserirDados" prefHeight="64.2" prefWidth="331.83" style="-fx-background-radius: 47.5; -fx-background-color: linear-gradient(to right, #08fe78, #08A951);" textFill="WHITE">
          <font>
             <Font size="32.0" />
          </font>
@@ -46,7 +46,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Slider blockIncrement="1.0" layoutX="24.0" layoutY="521.93" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="18.0" prefWidth="540.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
+      <Slider fx:id="sliNivelDesejoFumo" blockIncrement="1.0" layoutX="24.0" layoutY="521.93" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="18.0" prefWidth="540.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" />
       <ImageView fitHeight="150.0" fitWidth="227.0" layoutX="171.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@imagens/RegistroDiario.png" />

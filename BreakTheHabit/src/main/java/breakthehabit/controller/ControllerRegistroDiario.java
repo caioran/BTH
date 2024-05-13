@@ -1,5 +1,6 @@
 package breakthehabit.controller;
 
+import breakthehabit.model.RegistroDiario;
 import breakthehabit.model.dao.ConnectionDAO;
 import breakthehabit.model.dao.RegistroDiarioDAO;
 import javafx.event.ActionEvent;
@@ -91,9 +92,15 @@ public class ControllerRegistroDiario {
                 if(dataModelo != null) {
                     if(!(RegistroDiarioDAO.verificadorData(conn, dataModelo))){
                         if(validacaoNumerosInteiros(txtCigarrosFumados.getText())){
-
+                            RegistroDiario novoRegistro = new RegistroDiario(dataModelo, txtCigarrosFumados.getText(), sliNivelDesejoFumo.getValue());
+                            if(novoRegistro.inserirNoBD()){
+                                lblErro.setText("Dados inseridos com sucesso!");
+                            }
+                            else{
+                                lblErro.setText("Houve algum erro na inserção dos dados!");
+                            }
                         }else{
-
+                            lblErro.setText("Número de cigarros fumados inválido.");
                         }
                     }else{
                         lblErro.setText("Data já existente no banco de dados!");

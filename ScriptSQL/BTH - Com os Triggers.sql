@@ -1,5 +1,7 @@
 /* UPX II: */
 
+-- Criação das tabelas
+
 CREATE TABLE Usuario (
     Nome VARCHAR(100) NOT NULL,
     data_nascimento DATE NOT NULL,
@@ -28,36 +30,24 @@ CREATE TABLE RegistroDiario (
     PRIMARY KEY (ID_RegistroDiario),
     FOREIGN KEY (ID_User) REFERENCES Usuario(ID_User)
 );
-select * from registrodiario;
+
+-- Fim da criação das tabelas
+
+-- Alteração nas tabelas
+
 ALTER TABLE RegistroDiario MODIFY COLUMN data_registro DATE;
 ALTER TABLE usuario ADD COLUMN data_de_registro timestamp DEFAULT current_timestamp;
 
+-- Fim das alterações.
+
+-- Inserção para teste
 insert into usuario (Nome, data_nascimento, data_comeco_fumo, Email, Senha, media_cigarro, meta, custo_diario, nivel_dependencia) values ("Joao", "2005-05-09", "2023-03-05", "admi1@gmail.com", "admin", 10, 0, 10.00, 5.00);
 select * from usuario;
-delete from usuario where ID_User = 7;
+-- Fim da inserção.
 
 
 
-
-
-CREATE TABLE Usuario (
-    Nome VARCHAR(100) NOT NULL,
-    data_nascimento DATE NOT NULL,
-    data_comeco_fumo DATE NOT NULL,
-    ID_User INTEGER AUTO_INCREMENT NOT NULL,
-    Email VARCHAR (100) NOT NULL,
-    Senha VARBINARY(255) NOT NULL,
-    media_cigarro INTEGER NOT NULL,
-    meta INTEGER NOT NULL,
-    custo_diario DOUBLE(5,2) NOT NULL,
-    nivel_dependencia DOUBLE NOT NULL,
-    data_de_registro timestamp DEFAULT current_timestamp,
-    primary key (ID_User)
-);
-
-drop trigger calcula_qtdDiasVicio;
-
-
+-- Trigger para calcular a quantidade de dias do vício do usuário
 
 DELIMITER //
 
@@ -76,13 +66,10 @@ END//
 
 DELIMITER ;
 
-drop trigger calcularContagemCigarros;
-delete from usuario where ID_User = 3;
-select * from usuario;
+-- Fim do trigger. 
 
 
-
-
+-- Trigger para calcular a quantidade de cigarros que o usuário já fumou. 
 
 DELIMITER //
 
@@ -104,7 +91,11 @@ BEGIN
 END;
 //
 
+-- Fim do trigger.
+
 DELIMITER ;
+
+-- Inserções de dados para teste 
 
 insert into registrodiario (nivel_desejo_fumar, cigarros_fumados, data_registro, ID_User) values (5.00, 10, NOW(), 8);
 insert into registrodiario (nivel_desejo_fumar, cigarros_fumados, data_registro, ID_User) values (1.00, 0, '2024-05-13', 8);
@@ -116,6 +107,10 @@ insert into registrodiario (nivel_desejo_fumar, cigarros_fumados, data_registro,
 insert into registrodiario (nivel_desejo_fumar, cigarros_fumados, data_registro, ID_User) values (1.00, 0, '2024-05-17', 8);
 select * from registrodiario;
 select * from usuario;
+
+-- Fim das inserções. 
+
+-- Trigger para atualizar a quantidade de cigarros que o indivíduo já fumou. 
 
 DELIMITER //
 
@@ -139,7 +134,10 @@ END;
 
 DELIMITER ;
 
-drop trigger atualizarQtdDiasVicio;
+-- Fim do trigger.
+
+-- Trigger para atualizar a quantidade de dias sóbrio ou dependente do usuário (trigger apresentando má funcionamento). 
+
 DELIMITER //
 
 CREATE TRIGGER atualizarQtdDiasVicio
@@ -162,3 +160,5 @@ END;
 //
 
 DELIMITER ;
+
+-- Fim do trigger. 

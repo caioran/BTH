@@ -150,7 +150,7 @@ public class ControllerCadastro {
 
                                 try {
                                     // Carrega o arquivo FXML da segunda janela
-                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaCadastro2.fxml"));
+                                    FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/JanelaCadastro2.fxml"));
                                     Parent root = loader.load();
 
                                     // Cria uma nova cena
@@ -278,7 +278,7 @@ public class ControllerCadastro {
     public void abrirDashboard(ActionEvent event){
         try {
             // Carrega o arquivo FXML da segunda janela
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/TelaDashboard.fxml"));
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/JanelaDashboard.fxml"));
             Parent root = loader.load();
 
             // Cria uma nova cena

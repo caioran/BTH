@@ -1,16 +1,20 @@
 package breakthehabit.controller;
 
+import breakthehabit.model.Usuario;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
+import java.util.ResourceBundle;
 
-public class ControllerDashboard {
+public class ControllerDashboard implements Initializable {
 
     @FXML
     private Label lblValorGasto;
@@ -26,6 +30,9 @@ public class ControllerDashboard {
 
     @FXML
     private Label lblVontade;
+
+    @FXML
+    private Label lblNome;
 
     @FXML
     private Button btnNovoRegistro;
@@ -50,6 +57,10 @@ public class ControllerDashboard {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle){
+        lblNome.setText(Usuario.getNomeUser());
     }
 
 }

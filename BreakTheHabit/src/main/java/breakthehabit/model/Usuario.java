@@ -1,5 +1,11 @@
 package breakthehabit.model;
 
+import breakthehabit.model.dao.ConnectionDAO;
+import breakthehabit.model.dao.UserDAO;
+
+import java.sql.Connection;
+import java.sql.SQLException;
+
 public class Usuario {
 
     private static String nomeUser;
@@ -85,5 +91,16 @@ public class Usuario {
     }
 
 
+    public static void atribuicaoDosDados(String email){
 
+        try {
+            Connection conn = ConnectionDAO.getConnection("breakthehabit", "root", "");
+            UserDAO.selectUserData(conn, email);
+
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Não Conectou!");
+            e.printStackTrace();
+
+        }
+    }
 }

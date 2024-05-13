@@ -10,7 +10,7 @@ import java.sql.SQLException;
 public class RegistroDiarioDAO {
     public static boolean insert(Connection conn, String dataRegistro, String cigarrosFumados, double nivelDoDesejoFumo) {
         try {
-            String sql = "insert into usuario(nivel_desejo_fumar, cigarros_fumados, data_registro, ID_User" +
+            String sql = "insert into registrodiario(nivel_desejo_fumar, cigarros_fumados, data_registro, ID_User) " +
                          "values (?, ?, ?, ?);";
             PreparedStatement stmt = conn.prepareStatement(sql);
 
@@ -29,7 +29,7 @@ public class RegistroDiarioDAO {
         }
     }
     public static boolean verificadorData(Connection conn, String data) {
-        String sql = "SELECT COUNT(*) AS total FROM usuario WHERE data = ?;";
+        String sql = "SELECT COUNT(*) AS total FROM registrodiario WHERE data_registro = ?;";
         try (PreparedStatement stmt = conn.prepareStatement(sql)) {
             stmt.setDate(1, java.sql.Date.valueOf(data));
             ResultSet rs = stmt.executeQuery();
