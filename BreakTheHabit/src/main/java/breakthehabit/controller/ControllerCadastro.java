@@ -1,6 +1,7 @@
 package breakthehabit.controller;
 
 import breakthehabit.model.Registro;
+import breakthehabit.model.Usuario;
 import breakthehabit.model.dao.ConnectionDAO;
 import breakthehabit.model.dao.RegistroDAO;
 import javafx.event.ActionEvent;
@@ -240,7 +241,28 @@ public class ControllerCadastro {
 //                                lblData1.setText(novoUsuario.getDataNasc());
 //                                lblNome1.setText(novoUsuario.getNome());
                                 if(novoUsuario.inserirNoBD()){
-                                   abrirDashboard(null);
+                                    Usuario.atualizarDados(novoUsuario.getEmail());
+                                    try {
+                                        // Carrega o arquivo FXML da segunda janela
+                                        FXMLLoader loader = new FXMLLoader(getClass().getResource("/view/JanelaDashboard.fxml"));
+                                        Parent root = loader.load();
+
+                                        // Cria uma nova cena
+                                        Scene scene = new Scene(root);
+
+                                        // Obtém o palco (stage) atual a partir do evento
+                                        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+
+                                        // Fecha a janela atual
+                                        stage.close();
+
+                                        // Define a nova cena no palco (stage)
+                                        stage.setScene(scene);
+                                        stage.show();
+
+                                    } catch (IOException e) {
+                                        e.printStackTrace();
+                                    }
                                 }else{
                                     lblErro2.setText("Houve um erro! Revise os dados e tente novamente!");
 

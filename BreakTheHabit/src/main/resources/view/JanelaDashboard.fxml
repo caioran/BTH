@@ -23,15 +23,21 @@
                      <image>
                         <Image url="@imagens/NovoRegistro.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
             </Button>
-            <Button fx:id="btnNovoRegistro1" layoutY="962.0" maxHeight="61.0" maxWidth="326.0" minHeight="61.0" minWidth="326.0" mnemonicParsing="false" onAction="#abrirTelaRegistro" prefHeight="61.0" prefWidth="326.0" style="-fx-background-color: #02b252; -fx-background-radius: 0;">
+            <Button fx:id="btnSair" layoutY="962.0" maxHeight="61.0" maxWidth="326.0" minHeight="61.0" minWidth="326.0" mnemonicParsing="false" onAction="#sair" prefHeight="61.0" prefWidth="326.0" style="-fx-background-color: #02b252; -fx-background-radius: 0;">
                <graphic>
                   <ImageView fitHeight="52.0" fitWidth="288.0" pickOnBounds="true" preserveRatio="true">
                      <image>
                         <Image url="@imagens/Sair.png" />
                      </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </ImageView>
                </graphic>
             </Button>
@@ -58,11 +64,15 @@
                   <Font name="Nirmala UI" size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lblValorGasto" layoutX="103.0" layoutY="124.0" text="Valor">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Label>
+            <BorderPane fx:id="painelValorGasto" layoutX="50.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <Label fx:id="lblValorGasto" text="Valor" textFill="#823038" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
             <Label layoutX="85.0" layoutY="195.0" text="em cigarros." textFill="WHITE">
                <font>
                   <Font name="Nirmala UI" size="24.0" />
@@ -70,47 +80,50 @@
             </Label>
          </children>
       </Pane>
-      <Pane layoutX="1110.0" layoutY="267.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+      <Pane layoutX="747.0" layoutY="267.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
          <children>
-            <Label layoutX="33.0" layoutY="43.0" text="Sua média de cigarros" textFill="WHITE">
+            <Label layoutX="43.0" layoutY="66.0" text="Você ja economizou" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lblMediaDiaria" layoutX="103.0" layoutY="124.0" text="Valor">
+            <Label layoutX="18.0" layoutY="195.0" text="desde que decidiu mudar." textFill="WHITE">
                <font>
-                  <Font size="36.0" />
+                  <Font size="23.0" />
                </font>
             </Label>
-            <Label layoutX="58.0" layoutY="78.0" text="por dia é igual a: " textFill="WHITE">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
+            <BorderPane fx:id="painelMediaValorEco" layoutX="50.0" layoutY="50.0" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <Label fx:id="lblValorEconomizado" text="Valor" textFill="#00d147" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
          </children>
       </Pane>
-      <Pane layoutX="923.0" layoutY="642.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+      <Pane layoutX="1110.0" layoutY="267.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
          <children>
-            <Label layoutX="32.0" layoutY="64.0" text="Sua média de vontade" textFill="WHITE">
+            <Label layoutX="32.0" layoutY="61.0" text="Sua média de cigarros" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lblVontade" layoutX="108.0" layoutY="182.0" text="Valor">
-               <font>
-                  <Font size="36.0" />
-               </font>
-            </Label>
-            <Label layoutX="25.0" layoutY="89.0" text="de fumar, nos últimos 7" textFill="WHITE">
+            <Label layoutX="55.0" layoutY="91.0" text="por dia é igual a: " textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="102.0" layoutY="124.0" text="é igual a:" textFill="WHITE">
-               <font>
-                  <Font size="24.0" />
-               </font>
-            </Label>
+            <BorderPane fx:id="painelMediaDiaria" layoutX="50.0" layoutY="56.0" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <Label fx:id="lblMediaDiaria" text="Valor" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
          </children>
       </Pane>
       <Pane layoutX="552.0" layoutY="642.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
@@ -118,11 +131,6 @@
             <Label layoutX="99.0" layoutY="75.0" text="Você está" textFill="WHITE">
                <font>
                   <Font size="24.0" />
-               </font>
-            </Label>
-            <Label fx:id="lblCheckMeta" layoutX="103.0" layoutY="124.0" text="Valor">
-               <font>
-                  <Font size="36.0" />
                </font>
             </Label>
             <Label layoutX="85.0" layoutY="195.0" text="da sua meta" textFill="WHITE">
@@ -135,25 +143,43 @@
                   <Font size="24.0" />
                </font>
             </Label>
+            <BorderPane fx:id="painelMeta" layoutX="50.0" layoutY="51.0" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <Label fx:id="lblCheckMeta" text="Valor" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
          </children>
       </Pane>
-      <Pane layoutX="747.0" layoutY="267.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
+      <Pane layoutX="923.0" layoutY="642.0" maxHeight="300.0" maxWidth="300.0" minHeight="300.0" minWidth="300.0" prefHeight="300.0" prefWidth="300.0" style="-fx-background-color: #058C42; -fx-background-radius: 25;">
          <children>
-            <Label layoutX="43.0" layoutY="66.0" text="Você ja economizou" textFill="WHITE">
+            <Label layoutX="32.0" layoutY="64.0" text="Sua média de vontade" textFill="WHITE">
                <font>
                   <Font size="24.0" />
                </font>
             </Label>
-            <Label fx:id="lblValorEconomizado" layoutX="108.0" layoutY="113.0" text="Valor">
+            <Label layoutX="25.0" layoutY="89.0" text="de fumar, nos últimos 7" textFill="WHITE">
                <font>
-                  <Font size="36.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
-            <Label layoutX="18.0" layoutY="195.0" text="desde que decidiu mudar." textFill="WHITE">
+            <Label layoutX="102.0" layoutY="124.0" text="é igual a:" textFill="WHITE">
                <font>
-                  <Font size="23.0" />
+                  <Font size="24.0" />
                </font>
             </Label>
+            <BorderPane fx:id="painelVontade" layoutX="49.0" layoutY="82.0" prefHeight="200.0" prefWidth="200.0">
+               <center>
+                  <Label fx:id="lblVontade" text="Valor" BorderPane.alignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font>
+                  </Label>
+               </center>
+            </BorderPane>
          </children>
       </Pane>
    </children>

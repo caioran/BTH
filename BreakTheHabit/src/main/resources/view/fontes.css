@@ -1,0 +1,8 @@
+#btnIniCadastro:hover{
+    -fx-background-color: #0f0f0f;
+}
+
+#btnIniCadastro{
+    -fx-background-color: white;
+
+}

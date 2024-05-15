@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="1024.0" minWidth="1440.0" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-image: imagens\Background.jpg;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerInicial">
+<AnchorPane maxHeight="1024.0" maxWidth="1440.0" minHeight="1024.0" minWidth="1440.0" prefHeight="1024.0" prefWidth="1440.0" style="-fx-background-image: imagens\Background.jpg;" stylesheets="@fontes.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="breakthehabit.controller.ControllerInicial">
    <children>
       <ImageView fitHeight="1044.0" fitWidth="1566.0" layoutX="-20.0" layoutY="-15.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -39,6 +39,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btnIniEntrar" layoutX="84.0" layoutY="657.0" maxHeight="95.0" maxWidth="380.0" minHeight="95.0" minWidth="380.0" mnemonicParsing="false" onAction="#abrirTelaDeLogin" prefHeight="95.0" prefWidth="380.0" style="-fx-background-radius: 47.5; -fx-border-radius: 47.5; -fx-border-color: #06c05a; -fx-background-color: #ffff; -fx-border-width: 10;">
                <graphic>
@@ -48,6 +51,9 @@
                      </image>
                   </ImageView>
                </graphic>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
       </Pane>

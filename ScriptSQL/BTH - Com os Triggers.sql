@@ -20,6 +20,9 @@ CREATE TABLE Usuario (
     primary key (ID_User)
 );
 
+insert into usuario (Nome, data_nascimento, data_comeco_fumo, Email, Senha, media_cigarro, meta, custo_diario, nivel_dependencia) values ("Pedro", "2005-05-09", "2021-06-09", "teste@gmail.com", "admin", 10, 5, 10.00, 5.00);
+select * from usuario;
+
 
 CREATE TABLE RegistroDiario (
     ID_RegistroDiario INTEGER AUTO_INCREMENT,
@@ -31,7 +34,20 @@ CREATE TABLE RegistroDiario (
     FOREIGN KEY (ID_User) REFERENCES Usuario(ID_User)
 );
 
+insert into registrodiario (nivel_desejo_fumar, cigarros_fumados, data_registro, ID_User) values
+(8.00, 9, '2024-05-06', 9),
+(5.00, 7, '2024-05-07', 9),
+(6.00, 6, '2024-05-08', 9),
+(7.00, 5, '2024-05-09', 9),
+(10.00, 6, '2024-05-10', 9),
+(9.00, 7, '2024-05-11', 9),
+(8.00, 9, '2024-05-12', 9);
+
+select * from registrodiario;
+select count(*) as total from registrodiario where data_registro = '2024-05-13' and ID_User = 8;
+
 -- Fim da criação das tabelas
+
 
 -- Alteração nas tabelas
 

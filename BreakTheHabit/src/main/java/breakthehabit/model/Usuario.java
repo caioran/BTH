@@ -170,4 +170,52 @@ public class Usuario {
 
         }
     }
+    public static void atualizarDados(String email){
+        atribuicaoDosDados(email);
+        atribuicaoValoresCalculados();
+        atribuicaoMedia();
+
+
+    }
+
+    public static double calcularGasto(){
+
+        double valorGasto;
+        Usuario.atribuicaoValoresCalculados();
+
+        valorGasto = (Usuario.getQtdDiasVicio() * Usuario.getReaisGastoDiaUser());
+
+        return valorGasto;
+    }
+
+    public static double calcularEconomia(){
+        double valorEconomizado;
+        Usuario.atribuicaoValoresCalculados();
+
+        valorEconomizado = (Usuario.getQtdDiasSemFumar() * Usuario.getReaisGastoDiaUser());
+
+        return valorEconomizado;
+    }
+
+    public static void atualizarMetricas(){
+        calcularEconomia();
+        calcularEconomia();
+    }
+
+    public static void sairDaAplicacao(){
+        setNomeUser("");
+        setEmailUser("");
+        setDataNascUser("");
+        setDataInicioFumoUser("");
+        setMediaCigarrosDiaUser(0);
+        setReaisGastoDiaUser(0);
+        setMetaUser(0);
+        setDependenciaUser(0);
+        setIdUser(0);
+        setContagemCigarros(0);
+        setQtdDiasVicio(0);
+        setQtdDiasSemFumar(0);
+        setMediaDiaria(0);
+        setMediaVontadeDiaria(0);
+    }
 }

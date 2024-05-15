@@ -29,4 +29,3 @@ public class MainController extends Application {
     }
 
 }
-//Crie um método em java com MySQL que puxe uma data, identifique a quantidade de dias e multiplique pelo valor de uma coluna. O que eu preciso é o seguinte, há uma tabela chamada usuário, nessa também contém o campo data_comeco_fumo, eu preciso que você identifique o

@@ -1,6 +1,7 @@
 package breakthehabit.controller;
 
 import breakthehabit.model.RegistroDiario;
+import breakthehabit.model.Usuario;
 import breakthehabit.model.dao.ConnectionDAO;
 import breakthehabit.model.dao.RegistroDiarioDAO;
 import javafx.event.ActionEvent;
@@ -97,6 +98,9 @@ public class ControllerRegistroDiario {
                             if(novoRegistro.inserirNoBD()){
                                 lblErro.setText("Dados inseridos com sucesso!");
                                 Stage stage = (Stage) lblErro.getScene().getWindow();
+                                Usuario.atualizarDados(Usuario.getEmailUser());
+                                Usuario.atualizarMetricas();
+
                                 stage.close();
                             }
                             else{
