@@ -13,14 +13,14 @@ A aplicação está sendo desenvolvida através da linguagem Java e da bibliotec
 O projeto se encontra na versão 2.0.
 
 ## Estrutura do Projeto
-+ Controller
++ **Controller**
   - ControllerCadastro: Classe controladora responsável por pegar todos os dados das telas de cadastro, passar pelas validações e enviar para as verificações da classe Registro.
   - ControllerDashboard: Classe controladora responsável por puxar os dados da classe Usuario e apresentá-los ao usuário.
   - ControllerInicial: Classe controladora responsável pela tela inicial do projeto, a classe tem como função redirecionar o usuário a tela de Login ou Cadastro, conforme desejado.
   - ControllerLogin: Classe controladora responsável por pegar todos os dado da telas de login, passar pelas validações e enviar para as verificações da classe Login.
   - ControllerRegistroDiario: Classe controladora por pegar todos os dados da tela de registro diário, passar pelas validações e enviar para as verificações da classe RegistroDiario.
   - MainController: Classe main do projeto.
-+ Model
++ **Model**
   - ConnectionDAO: Realizar a conexão com o banco de dados.
   - RegistroDAO: Classe responsável por armazenar o método de inserção dos dados coletados pela classe Controller das telas de cadastro e inseri-los no banco de dados.
   - LoginDAO: Classe responsável por armazenar o método de validação do email e senha inseridos na tela de Login da aplicação.
@@ -30,7 +30,7 @@ O projeto se encontra na versão 2.0.
   - Registro: Receber os dados da classse controladora ControllerCadastro, armazená-los em variáveis temporárias e chamar o método para inserção dos dados na base de dados do projeto, método que se encontra presente na classe RegistroDAO.
   - RegistroDiario: Receber os dados da classse controladora ControllerRegistroDiario, armazená-los em variáveis temporárias e chamar o método para inserção dos dados na base de dados do projeto, método que se encontra presente na classe RegistroDiarioDAO.
   - Usuario: Classe responsável pelo armazenamento em variáveis de todos os dados do usuário que o sistema precisa para realização dos cálculos, responsável pela realização de cálculos com base nos dados coletados.
-+ View - arquivos FXML
++ **View** - arquivos FXML
   - TelaInicial: Tela inicial do projeto.
   - TelaCadastro1: Primeira tela de cadastro do projeto.
   - TelaCadastro2: Segunda tela de cadastro do projeto.
