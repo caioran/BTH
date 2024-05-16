@@ -14,12 +14,12 @@ O projeto se encontra na versão 2.0.
 
 ## Estrutura do Projeto
 + Controller
- - ControllerCadastro: Classe controladora responsável por pegar todos os dados das telas de cadastro, passar pelas validações e enviar para as verificações da classe Registro.
- - ControllerDashboard: Classe controladora responsável por puxar os dados da classe Usuario e apresentá-los ao usuário.
- - ControllerInicial: Classe controladora responsável pela tela inicial do projeto, a classe tem como função redirecionar o usuário a tela de Login ou Cadastro, conforme desejado.
- - ControllerLogin: Classe controladora responsável por pegar todos os dado da telas de login, passar pelas validações e enviar para as verificações da classe Login.
- - ControllerRegistroDiario: Classe controladora por pegar todos os dados da tela de registro diário, passar pelas validações e enviar para as verificações da classe RegistroDiario.
- - MainController: Classe main do projeto.
+  - ControllerCadastro: Classe controladora responsável por pegar todos os dados das telas de cadastro, passar pelas validações e enviar para as verificações da classe Registro.
+  - ControllerDashboard: Classe controladora responsável por puxar os dados da classe Usuario e apresentá-los ao usuário.
+  - ControllerInicial: Classe controladora responsável pela tela inicial do projeto, a classe tem como função redirecionar o usuário a tela de Login ou Cadastro, conforme desejado.
+  - ControllerLogin: Classe controladora responsável por pegar todos os dado da telas de login, passar pelas validações e enviar para as verificações da classe Login.
+  - ControllerRegistroDiario: Classe controladora por pegar todos os dados da tela de registro diário, passar pelas validações e enviar para as verificações da classe RegistroDiario.
+  - MainController: Classe main do projeto.
 + Model
   - ConnectionDAO: Realizar a conexão com o banco de dados.
   - RegistroDAO: Classe responsável por armazenar o método de inserção dos dados coletados pela classe Controller das telas de cadastro e inseri-los no banco de dados.
