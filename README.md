@@ -1,4 +1,4 @@
-![BTHIntellij](https://github.com/caioran/BTH/assets/143942475/58813b4d-a02e-4514-aa78-7fcc9b467570)
+![image](https://github.com/caioran/BTH/assets/143942475/9f0e435e-de2a-4e06-9e7b-8c5cc7723e90)
 
 # BreakTheHabit
 O projeto em questão recebeu o nome de BreakTheHabit
@@ -10,22 +10,34 @@ Com base no 3º Objetivo de Desenvolvimento Sustentável da ONU, meta 3.A - "For
 A aplicação está sendo desenvolvida através da linguagem Java e da biblioteca gráfica JavaFX, a IDE que está sendo utilizada é o IntelliJ. Para o desenvolvimento do banco de dados estamos utilizando o Sistema Gerenciador de Banco de Dados MySQL.
 
 ## Versionamento
-O projeto se encontra na versão 1.0.
+O projeto se encontra na versão 2.0.
 
 ## Estrutura do Projeto
-- Registro: Pegar os dados, verificar se o campo "Senha" e o campo "Confirmar Senha" estão iguais.
-- RegistroDAO: Enviar os dados da classe Registro para o banco de dados.
-- ConnectionDAO: Realizar a conexão com o banco de dados.
-- Login: Pegar os dados do campo Email e Senha, enviar para a classe UserDAO para autenticação, enviar o email autenticado para 
- classe UserSession.
-- UserSession: Fazer o login, logout, criar uma sessão para o usuário, enviar os dados da sessão para a classe User.
-- User: armazenar em váriaveis os dados do usuário da sessão. 
-- RegistroDiario: Coletar os dados que o usuário irá inserir diariamente e enviar para a classe RegistroDiarioDAO.
-- RegistroDiarioDAO: Verificar se a data que o usuário inseriu é única no banco de dados e cadastrar os dados no banco de dados.
-- ValorGasto: Calcular, através dos dados herdados pela superclasse User, quantos reais o usuário já gastou em cigarros.
-- VerificadorMedia: Calcular, através dos dados herdados pela superclasse User, quantos cigarros em média o usuário está fumando por dia.
-- ValorEconomizado: Calcular, através dos dados herdados pela superclasse User, quantos reais o usuário já economizou desde que começou a usar a aplicação.
-- VerificadorVontade: Calcular, através dos dados herdados pela superclasse User, a média do desejo de fumar dos último sete dias do usuário.
++ **Controller**
+  - ControllerCadastro: Classe controladora responsável por pegar todos os dados das telas de cadastro, passar pelas validações e enviar para as verificações da classe Registro.
+  - ControllerDashboard: Classe controladora responsável por puxar os dados da classe Usuario e apresentá-los ao usuário.
+  - ControllerInicial: Classe controladora responsável pela tela inicial do projeto, a classe tem como função redirecionar o usuário a tela de Login ou Cadastro, conforme desejado.
+  - ControllerLogin: Classe controladora responsável por pegar todos os dado da telas de login, passar pelas validações e enviar para as verificações da classe Login.
+  - ControllerRegistroDiario: Classe controladora por pegar todos os dados da tela de registro diário, passar pelas validações e enviar para as verificações da classe RegistroDiario.
+  - MainController: Classe main do projeto.
++ **Model**
+  - ConnectionDAO: Realizar a conexão com o banco de dados.
+  - RegistroDAO: Classe responsável por armazenar o método de inserção dos dados coletados pela classe Controller das telas de cadastro e inseri-los no banco de dados.
+  - LoginDAO: Classe responsável por armazenar o método de validação do email e senha inseridos na tela de Login da aplicação.
+  - RegistroDiario: Classe responsável por armazenar o método de inserção dos dados coletados pela classe Controller das tela de registro diário e inseri-los no banco de dados.
+  - UserDAO: Classe responsável por, através da validação do email e senha do usuário, puxar os dados correspondentes ao email inserido e armazená-los em variáveis da classe Usuario.
+  - Login: Receber os dados da classe controladora ControllerLogin e chamar o método responsável pela validação do login, presente na classe LoginDAO.
+  - Registro: Receber os dados da classse controladora ControllerCadastro, armazená-los em variáveis temporárias e chamar o método para inserção dos dados na base de dados do projeto, método que se encontra presente na classe RegistroDAO.
+  - RegistroDiario: Receber os dados da classse controladora ControllerRegistroDiario, armazená-los em variáveis temporárias e chamar o método para inserção dos dados na base de dados do projeto, método que se encontra presente na classe RegistroDiarioDAO.
+  - Usuario: Classe responsável pelo armazenamento em variáveis de todos os dados do usuário que o sistema precisa para realização dos cálculos, responsável pela realização de cálculos com base nos dados coletados.
++ **View** - arquivos FXML
+  - TelaInicial: Tela inicial do projeto.
+  - TelaCadastro1: Primeira tela de cadastro do projeto.
+  - TelaCadastro2: Segunda tela de cadastro do projeto.
+  - TelaDeLogin: Tela de login da aplicação.
+  - JanelaDashboard: Tela principal da aplicação.
+  - JanelaRegistroDiario: Janela responsável pela inserção diária de dados do projeto.
+
 
 ## Autores
 
@@ -33,3 +45,5 @@ O projeto se encontra na versão 1.0.
 - Cristian Souza (RA: 237085, email: 237085@facens.br),
 - Pedro Henrique Arruda  (RA: 236720, email: pedrohenriquearruda158@gmail.com),
 -  Vinícius Lacava Aguiar (RA: 236962, email: 236962@facens.br).
+  
+-  Contato da equipe: pedrohenriquearruda158@gmail.com - (Pedro Henrique Arruda).
