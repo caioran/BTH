@@ -99,4 +99,19 @@ public class UserDAO {
         }
     }
 
+    public static void verificadorEconomia(Connection conn, int id) {
+        String sql = "SELECT COUNT(*) AS total FROM registrodiario WHERE cigarros_fumados = 0 and ID_User = ?;";
+        try (PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, Usuario.getIdUser());
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+               Usuario.setQtdDiasSobrio(rs.getInt("total"));
+
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException("Erro ao verificar os dias sóbrio. " + e.getMessage());
+        }
+
+    }
+
 }

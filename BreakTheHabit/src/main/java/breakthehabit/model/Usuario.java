@@ -22,6 +22,24 @@ public class Usuario {
     private static int qtdDiasSemFumar;
     private static int mediaDiaria;
     private static double mediaVontadeDiaria;
+    private static int qtdDiasSobrio;
+    private static double valorEconomizado;
+
+    public static int getQtdDiasSobrio() {
+        return qtdDiasSobrio;
+    }
+
+    public static void setQtdDiasSobrio(int qtdDiasSobrio) {
+        Usuario.qtdDiasSobrio = qtdDiasSobrio;
+    }
+
+    public static double getValorEconomizado() {
+        return valorEconomizado;
+    }
+
+    public static void setValorEconomizado(double valorEconomizado) {
+        Usuario.valorEconomizado = valorEconomizado;
+    }
 
     public static int getMediaDiaria() {
         return mediaDiaria;
@@ -190,11 +208,21 @@ public class Usuario {
 
     public static double calcularEconomia(){
         double valorEconomizado;
-        Usuario.atribuicaoValoresCalculados();
+        try {
+            Connection conn = ConnectionDAO.getConnection("breakthehabit", "root", "");
+            UserDAO.verificadorEconomia(conn, getIdUser());
+            Usuario.atribuicaoValoresCalculados();
+            valorEconomizado = (Usuario.getQtdDiasSobrio() * Usuario.getReaisGastoDiaUser());
+            return valorEconomizado;
 
-        valorEconomizado = (Usuario.getQtdDiasSemFumar() * Usuario.getReaisGastoDiaUser());
+        } catch (ClassNotFoundException | SQLException e) {
+            System.out.println("Não Conectou!");
+            e.printStackTrace();
+            return 0;
 
-        return valorEconomizado;
+        }
+
+
     }
 
     public static void atualizarMetricas(){

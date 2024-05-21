@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.text.*?>
 <?import java.lang.*?>
@@ -17,7 +18,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <TextField fx:id="txtData" layoutX="15.0" layoutY="269.86" prefHeight="52.29" prefWidth="534.0" promptText="21/03/2024" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+        <TextField fx:id="txtData" layoutX="15.0" layoutY="269.86" prefHeight="52.29" prefWidth="534.0" promptText="21/03/2024" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42; -fx-text-fill: #ffffff;">
          <font>
             <Font size="18.0" />
          </font></TextField>
@@ -40,7 +41,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <TextField fx:id="txtCigarrosFumados" layoutX="15.0" layoutY="379.86" prefHeight="52.29" prefWidth="534.0" promptText="0" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42;">
+      <TextField fx:id="txtCigarrosFumados" layoutX="15.0" layoutY="379.86" prefHeight="52.29" prefWidth="534.0" promptText="0" style="-fx-background-color: #058c42; -fx-border-color: #BABABA; -fx-border-radius: 42; -fx-text-fill: #ffffff;">
          <font>
             <Font size="18.0" />
          </font></TextField>
@@ -49,7 +50,7 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Slider fx:id="sliNivelDesejoFumo" blockIncrement="1.0" layoutX="24.0" layoutY="521.93" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="18.0" prefWidth="540.0" showTickLabels="true" showTickMarks="true" snapToTicks="true">
+      <Slider fx:id="sliNivelDesejoFumo" blockIncrement="1.0" layoutX="24.0" layoutY="521.93" majorTickUnit="1.0" max="10.0" minorTickCount="0" prefHeight="18.0" prefWidth="540.0" showTickLabels="true" showTickMarks="true" snapToTicks="true" style="-fx-text-fill: #ffffff;">
          <cursor>
             <Cursor fx:constant="HAND" />
          </cursor></Slider>

@@ -119,8 +119,9 @@ public class ControllerDashboard implements Initializable {
 
     }
 
-    public static void atualizacaoDasMetricas(){
+    public void atualizacaoDasMetricas(){
         Usuario.atualizarMetricas();
+        atualizacaoLabels();
     }
 
     public void atualizacaoLabels(){
@@ -179,6 +180,39 @@ public class ControllerDashboard implements Initializable {
             e.printStackTrace();
         }
 
+    }
+
+    @FXML
+    public void atualizarDashboard(ActionEvent event){
+        Usuario.atualizarMetricas();
+        lblNome.setText(Usuario.getNomeUser());
+        lblValorGasto.setText("R$ -" + String.valueOf(Usuario.calcularGasto()));
+        lblValorEconomizado.setText("R$ " + String.valueOf(Usuario.calcularEconomia()));
+        if(Usuario.getMediaDiaria() > Usuario.getMetaUser()){
+            lblMediaDiaria.setText(String.valueOf(Usuario.getMediaDiaria()));
+            lblMediaDiaria.setTextFill(Color.web("#823038"));
+        }
+        else{
+            lblMediaDiaria.setText(String.valueOf(Usuario.getMediaDiaria()));
+            lblMediaDiaria.setTextFill(Color.web("#00D147"));
+        }
+
+        if(Usuario.getMediaDiaria() > Usuario.getMetaUser()){
+            lblCheckMeta.setText("FORA");
+            lblCheckMeta.setTextFill(Color.web("#823038"));
+        }
+        else{
+            lblCheckMeta.setText("DENTRO");
+            lblCheckMeta.setTextFill(Color.web("#00D147"));
+        }
+        if(Usuario.getMediaVontadeDiaria() > 5){
+            lblVontade.setText(String.valueOf(Usuario.getMediaVontadeDiaria()));
+            lblVontade.setTextFill(Color.web("#823038"));
+        }
+        else{
+            lblVontade.setText(String.valueOf(Usuario.getMediaVontadeDiaria()));
+            lblVontade.setTextFill(Color.web("#00D147"));
+        }
     }
 
 
