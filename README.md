@@ -46,3 +46,27 @@ O projeto se encontra na versão 2.0.
 -  Vinícius Lacava Aguiar (RA: 236962, email: 236962@facens.br).
   
 -  Contato da equipe: pedrohenriquearruda158@gmail.com - (Pedro Henrique Arruda).
+
+## Imagens da aplicação
+
+Tela Inicial:
+![image](https://github.com/caioran/BTH/assets/143942475/3b7d0d4f-7ce5-4592-b3ff-d7ab45de84a0)
+
+
+Tela de Login: 
+![image](https://github.com/caioran/BTH/assets/143942475/a0756935-a6f0-40d3-b44f-290cab977a99)
+
+
+Telas de Cadastro: 
+![image](https://github.com/caioran/BTH/assets/143942475/b327e2f2-af54-4350-852d-ac9129bbe5c9)
+
+![image](https://github.com/caioran/BTH/assets/143942475/a430abae-6377-4509-81f5-30698c351ac1)
+
+
+Tela Principal (Dashboard): 
+![image](https://github.com/caioran/BTH/assets/143942475/0daad24c-944c-480d-8159-a8799a8ff576)
+
+
+Janela do registro diário: 
+![image](https://github.com/caioran/BTH/assets/143942475/f02600cc-46bf-4038-be83-65fea98af0bc)
+
