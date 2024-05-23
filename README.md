@@ -67,7 +67,7 @@ O projeto se encontra na versão 2.0.
 ![image](https://github.com/caioran/BTH/assets/143942475/0daad24c-944c-480d-8159-a8799a8ff576)
 
 
-### ** Janela do registro diário: **
+### **Janela do registro diário:**
 
 ![image](https://github.com/caioran/BTH/assets/143942475/f02600cc-46bf-4038-be83-65fea98af0bc)
 
