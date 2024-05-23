@@ -42,7 +42,6 @@ O projeto se encontra na versão 2.0.
 ## Autores
 
 - Caio Alves de Sousa (RA: 235440, email: caioalvesdesousa2005@gmail.com),
-- Cristian Souza (RA: 237085, email: 237085@facens.br),
 - Pedro Henrique Arruda  (RA: 236720, email: pedrohenriquearruda158@gmail.com),
 -  Vinícius Lacava Aguiar (RA: 236962, email: 236962@facens.br).
   
