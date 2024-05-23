@@ -25,7 +25,7 @@
                 <Font size="20.0" />
             </font>
         </Label>
-        <Label layoutX="182.0" layoutY="305.0" text="Data de quando começou a fumar">
+        <Label layoutX="182.0" layoutY="305.0" text="Data aproximada de quando começou a fumar">
             <font>
                 <Font size="18.0" />
             </font>
@@ -69,12 +69,12 @@
             <Cursor fx:constant="HAND" />
          </cursor>
         </Button>
-        <Label layoutX="182.0" layoutY="410.0" text="Média de cigarros por dia">
+        <Label layoutX="182.0" layoutY="410.0" text="Média aproximada de cigarros que você fuma por dia">
             <font>
                 <Font size="18.0" />
             </font>
         </Label>
-        <Label layoutX="182.0" layoutY="523.0" text=" Média de reais gastos por dia com cigarros">
+        <Label layoutX="182.0" layoutY="523.0" text=" Média aproximada de reais gastos por dia com cigarros">
             <font>
                 <Font size="18.0" />
             </font>

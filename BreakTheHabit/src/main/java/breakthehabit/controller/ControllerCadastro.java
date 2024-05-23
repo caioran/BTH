@@ -140,11 +140,7 @@ public class ControllerCadastro {
                         this.dataModelo = this.formatarData(txtDataNasc.getText());
                         if(dataModelo != null) {
                             if (!(RegistroDAO.verificadorEmail(conn, txtEmail.getText()))) {
-//                                novoUsuario.setNome(txtNome.getText());
-//                                novoUsuario.setEmail(txtEmail.getText());
-//                                novoUsuario.setDataNasc(this.dataModelo);
-//                                novoUsuario.setSenha(txtSenha.getText());
-//                                novoUsuario.setConfirmarSenha(txtConfirmarSenha.getText());
+
 
                                 novoUsuario.primeiraInsercao(txtNome.getText(), txtEmail.getText(), this.dataModelo, txtSenha.getText());
 
