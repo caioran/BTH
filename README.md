@@ -10,7 +10,7 @@ Com base no 3º Objetivo de Desenvolvimento Sustentável da ONU, meta 3.A - "For
 A aplicação está sendo desenvolvida através da linguagem Java e da biblioteca gráfica JavaFX, a IDE que está sendo utilizada é o IntelliJ. Para o desenvolvimento do banco de dados estamos utilizando o Sistema Gerenciador de Banco de Dados MySQL.
 
 ## Versionamento
-O projeto se encontra na versão 2.0.
+O projeto se encontra na versão 1.0.
 
 ## Estrutura do Projeto
 + **Controller**
